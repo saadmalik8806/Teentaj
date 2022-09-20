@@ -52,6 +52,22 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
             }
         }
     }
+    // if(isset($_POST['mod_quantity'])){
+    //     foreach($_SESSION['cart'] as $key => $value){
+    //         if ($value['item_name']==$_POST['item_name'])
+    //          {
+
+    //             $_SESSION['cart'][$key]['quantity']=$_POST['mod_quantity'];
+                 
+    //             echo "
+    //             <script>
+                
+    //             window.location.href='../cart_total_item.php';
+    //             </script>
+    //             ";               
+    //         }
+    //     }
+    // }
 }
 
 
@@ -318,2310 +334,316 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
                 </div>
             </div>
             <!-- searchbox -->
-            <!-- profile login -->
-            <div class="prolog">
-                <div class="prolog-in">
-                    <div class="gestwrp">
-                        <div class="guestlft">
-                            <img src="../images/profile-Icon.svg">
-                            <p>Guest User</p>
-                        </div>
-                        <div class="guestclose">
-                            <img src="../images/close-apply.svg">
-                        </div>
-                    </div>
-
-                    <div class="logginn">
-
-                        <span class="invalid-feedback" style="display: block;margin: 5px 5px;font-size: 16px;"
-                            role="alert">
-                            <strong id="error_message"></strong>
-                        </span>
-
-
-                        <form method="POST" id="login" action="#">
-                            <input type="hidden" name="_token" value="OlZktzm0J07k7e9uaqZRHrHAz2rXoAyKQzk7SpRt">
-                            <div class="form-group">
-                                <label>E-mail Address</label>
-                                <input id="email" type="text" class="form-control " name="email" value="" required=""
-                                    autocomplete="email" autofocus="">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input id="password" type="password" class="form-control " name="password" required=""
-                                    autocomplete="current-password">
-
-                            </div>
-
-                            <div class="control-group">
-                                <label class="control control-checkbox">
-                                    Keep me sign In
-                                    <input type="checkbox">
-                                    <div class="control_indicator"></div>
-                                </label>
-                            </div>
-                            <a href="#"> Forget Password </a> <br><br>
-                            <button type="submit" class="button-red">Login</button>
-                            <br>
-                            <br>
-                            <span><a href="#"><img src="../images/login-with-facebook (1).svg"
-                                        style="width: 229px;height: auto;"> </a>
-                                <a href="#"><img src="../images/login-with-google.svg"
-                                        style="width: 229px;height: auto;"> </a>
-                            </span>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="dontacc">
-                    <p>Don’t have an account yet?</p>
-                    <a href="#">Create an account <span><img
-                                src="../images/product-image/red-angle-right (1).png"></span></a>
-                </div>
-            </div>
-
-            <div class="modal fade" id="myModal--apply">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title applytite">Apply Coupon</h4>
-                            <button type="button" class="close" data-dismiss="modal"><img
-                                    src="../images/close-apply.svg" width="25"></button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div id="coupon_modal_body" class="modal-body">
-
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="button-red">Apply Coupon</button>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- profile login -->
-
-            <!-- Main Basket -->
-            <div class="baskdetail">
-
-            </div>
-            <div class="overlay-blur"></div>
-            <!-- Main Basket -->
-            <!-- product detials -->
-            <div class="sub-product-detials">
-                <div class="container">
-
-
-
-                    <div class="row">
-                        <div class="col-lg-7 col-md-12 col-12">
-                            <div id="sync1" class="owl-carousel owl-theme owl-loaded owl-drag">
-                                <div class="owl-stage-outer">
-                                    <div class="owl-stage"
-                                        style="transform: translate3d(-1312px, 0px, 0px); transition: all 0s ease 0s; width: 5251px;">
-                                        <div class="owl-item cloned" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/product-image/Artboard 2_546.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/product-image/Artboard 3_5.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item cloned" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/72561648115161.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/72561648115161.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item active" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/5 Grams Saffron Pack.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/5 Grams Saffron Pack.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/60221648115161.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/60221648115161.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/5 Grams Saffron Pack.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/5 Grams Saffron Pack.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/60221648115161.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/60221648115161.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item cloned" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/60221648115161.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/60221648115161.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="owl-item cloned" style="width: 656.359px;">
-                                            <div class="item">
-                                                <a target="_blank" href="../images/product-image/Artboard 3_5.png"
-                                                    data-lightbox="gallery">
-                                                    <img id="img1" src="../images/product-image/Artboard 3_5.png">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span
-                                            aria-label="Previous">‹</span></button><button type="button"
-                                        role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
-                                </div>
-                                <div class="owl-dots"><button role="button"
-                                        class="owl-dot active"><span></span></button><button role="button"
-                                        class="owl-dot"><span></span></button><button role="button"
-                                        class="owl-dot"><span></span></button><button role="button"
-                                        class="owl-dot"><span></span></button></div>
-                            </div>
-                            <div id="sync2" class="owl-carousel owl-theme owl-loaded owl-drag">
-                                <div class="owl-stage-outer">
-                                    <div class="owl-stage"
-                                        style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 916px;">
-                                        <div class="owl-item active current"
-                                            style="width: 198.786px; margin-right: 30px;">
-                                            <div class="item">
-                                                <img src="../images/product-image/Artboard 1.png">
-                                            </div>
-                                        </div>
-                                        <div class="owl-item active" style="width: 198.786px; margin-right: 30px;">
-                                            <div class="item">
-                                                <img src="../images/product-image/Artboard 3_5.png">
-                                            </div>
-                                        </div>
-                                        <div class="owl-item active" style="width: 198.786px; margin-right: 30px;">
-                                            <div class="item">
-                                                <img src="../images/product-image/Artboard 3_5.png">
-                                            </div>
-                                        </div>
-                                        <div class="owl-item active" style="width: 198.786px; margin-right: 30px;">
-                                            <div class="item">
-                                                <img src="../images/60221648115161.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-nav">
-                                    <button type="button" role="presentation" class="owl-prev disabled">
-                                        <span aria-label="Previous">‹</span>
-                                    </button><button type="button" role="presentation" class="owl-next"><span
-                                            aria-label="Next">›</span>
-                                    </button>
-                                </div>
-                                <div class="owl-dots">
-                                    <button role="button" class="owl-dot active">
-                                        <span></span>
-                                    </button>
-                                    <button role="button" class="owl-dot">
-                                        <span></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="accord-container desktop">
-                                <div id="accordion" class="accordion">
-                                    <div class="card mb-0">
-                                        <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
-                                            <a class="card-title">
-                                                Description
-                                            </a>
-                                        </div>
-                                        <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
-                                            <p></p>
-                                            <p>This beautiful 5-gram pack is the best-selling from our range online.
-                                                Visitors to Kashmir and even people abroad prefer to buy this affordably
-                                                priced 5-gram pack of the finest saffron available in India. This pack
-                                                is value for money and perfect for the home chef. It has 5 grams in 1
-                                                box/card. <b>MRP 1900 per Pack</b><br></p>
-                                            <p></p>
-                                        </div>
-                                        <div class="card-header lastcoll collapsed" data-toggle="collapse"
-                                            data-parent="#accordion" href="#collapseTwo">
-                                            <a class="card-title">
-                                                Storage
-                                            </a>
-                                        </div>
-                                        <div id="collapseTwo" class="card-body collapse" data-parent="#accordion">
-                                            <p></p>
-                                            <p><span style="color: rgb(25, 25, 25); font-family: ProdaSansThin;">Store
-                                                    saffron in an airtight container in a cool, dark place for up to six
-                                                    months for maximum flavour.</span><br></p>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-12 col-12">
-                            <div class="sub-details-in">
-                                <h4 class="playfair-title">5 Grams Saffron Pack</h4>
-                                <div class="star-rating">
-                                </div>
-                                <p class="common-red">Saffron Strands</p>
-                                <div class="qty-wrp">
-                                    <h4>₹ 1900.00</h4>
-                                    <span></span>
-                                    <div class="qtnfix">
-                                        <ul>
-                                            <li>QTY</li>
-                                            <li> <input type="button" value="-" class="qtyminus" field="quantity"
-                                                    style="font-weight: bold;">
-                                                <input type="text" name="quantity" id="product_detail_page_quantity"
-                                                    value="1" class="qty" style="margin-bottom: 0px !important">
-                                                <input type="button" value="+" class="qtyplus" field="quantity"
-                                                    style="font-weight: bold;">
-                                            </li>
-                                        </ul>
-                                        <p>The total saffron quantity in your cart needs
-                                            to be at least 2 grams at the time of checkout.</p>
-
-                                        <a href="#accordion2" class="black-arrow black-arrow-respo mobile480">More
-                                            information <span><img src="images/arrow-black-right.png"></span></a>
-
-                                        <a href="javascript:add_to_cart('30','#')" class="cart-btn"><button
-                                                class="button-red">Add To Cart</button></a>
-                                    </div>
-
-                                    <div class="availablilty-wrp hide">
-                                        <h5>Availablilty</h5>
-                                        <ul>
-                                            <li>
-                                                <input type="text" placeholder="Enter your pincode">
-                                                <span><a href="#">Check</a></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="availtag">
-                                        <ul>
-                                            <li><a href="javascript:void(0);"><span><img
-                                                            src="../images/red-tag.png"></span>Buy 2-5 Gm Saffron &amp;
-                                                    get 20% off </a></li>
-                                            <li><a href="javascript:void(0);"><span><img
-                                                            src="../images/red-tag.png"></span>Buy 6-14 Gm Saffron &amp;
-                                                    get 25% off</a></li>
-                                            <li><a href="javascript:void(0);"><span><img
-                                                            src="../images/red-tag.png"></span>Buy 15 Gm and above
-                                                    Saffron &amp; get 30% off</a></li>
-
-                                        </ul>
-                                    </div>
-
-                                    <a href="#sync2" class="black-arrow desktop">More information <span><img
-                                                src="../images/arrow-black-right.png"></span></a>
-                                </div>
-
-
-                                <div class="accord-container mobile480">
-                                    <div id="accordion2" class="accordion">
-                                        <div class="card mb-0">
-                                            <div class="card-header collapsed" data-toggle="collapse"
-                                                href="#collapsenewOne">
-                                                <a class="card-title">
-                                                    Description
-                                                </a>
-                                            </div>
-                                            <div id="collapsenewOne" class="card-body collapse"
-                                                data-parent="#accordion2">
-                                                <p></p>
-                                                <p>This beautiful 5-gram pack is the best-selling from our range online.
-                                                    Visitors to Kashmir and even people abroad prefer to buy this
-                                                    affordably priced 5-gram pack of the finest saffron available in
-                                                    India. This pack is value for money and perfect for the home chef.
-                                                    It has 5 grams in 1 box/card. <b>MRP 1900 per Pack</b><br></p>
-                                                <p></p>
-                                            </div>
-                                            <div class="card-header lastcoll collapsed" data-toggle="collapse"
-                                                data-parent="#accordion2" href="#collapsenewTwo">
-                                                <a class="card-title">
-                                                    Storage
-                                                </a>
-                                            </div>
-                                            <div id="collapsenewTwo" class="card-body collapse"
-                                                data-parent="#accordion2">
-                                                <p></p>
-                                                <p><span style="color: rgb(25, 25, 25); font-family: ProdaSansThin;">Store
-                                                        saffron in an airtight container in a cool, dark place for up to
-                                                        six months for maximum flavour.</span><br></p>
-                                                <p></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- product detials -->
-            <!-- extract begins-->
-            <section>
-                <div class="extract">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="container">
-                                <div class="col-sm-12">
-                                    <h2 class="playfair-title hallmark-title extract-title">Here’s The Ideal Way of
-                                        Using Saffron</h2>
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-12">
-                                <div class="extarct-slider">
-
-                                    <ul class="nav nav-tabs container" role="tablist">
-                                        <li class="nav-item">
-                                            <a id="myanchor" class="nav-link active" data-toggle="tab"
-                                                href="#Powdered">Powdered Saffron</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a id="myanchor" class="nav-link" data-toggle="tab" href="#Saffron0">Saffron
-                                                Strands</a>
-                                        </li>
-                                    </ul>
-
-                                    <div class="tab-content container-fluid">
-                                        <!-- tab1 -->
-                                        <div id="Powdered" class="tab-pane active">
-                                            <div class="tabwapcontext">
-                                                <div class="slider-main-change">
-                                                    <div class="slidech wow fadeInUp" data-wow-duration="1s"
-                                                        data-wow-delay="0.5s"
-                                                        style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                                        <div class="slides slideswrop">
-                                                            <img src="../images/Baby-Saffron-Powder-1 (1).gif"
-                                                                class="desktop">
-                                                            <img src="../images/Baby-Saffron-Powder-1 (1).gif"
-                                                                class="mobile768">
-                                                        </div>
-                                                        <div class="slidech-content container">
-                                                            <h5>Get The Most Out of Our Saffron.</h5>
-                                                            <!-- <p>Move the slider to see how it works</p> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="extaractfoot wow fadeInUp container"
-                                                    data-wow-duration="1.6s" data-wow-delay="0.5s"
-                                                    style="visibility: hidden; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: none;">
-
-                                                    <p>Saffron Powder is plain saffron (whole threads) which is grinded
-                                                        and made into powder form for easier use. It is perfect for the
-                                                        fast paced life of a consumer, as it can be sprinkled, stirred
-                                                        &amp; consumed on the go. The powdered saffron releases its
-                                                        colour, aroma and flavor within seconds which makes it ideal for
-                                                        instant use.</p>
-
-                                                    <a href="product.html" class="button-red">See Our Products</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- tab1 -->
-
-                                        <!-- tab2 -->
-                                        <div id="Saffron0" class="tab-pane fade">
-                                            <div class="tabwapcontext">
-                                                <div class="slider-main-change">
-                                                    <div class="slidech">
-                                                        <div class="slides slideswrop">
-                                                            <img src="images/Baby-Saffron-Powder-1 (1).gif"
-                                                                class="desktop">
-                                                            <img src="images/Baby-Saffron-Powder-1 (1).gif"
-                                                                class="mobile768">
-                                                        </div>
-                                                        <div class="slidech-content container">
-                                                            <h5>Get the most out of our saffron.</h5>
-                                                            <!-- <p>Move the slider to see how it works</p> -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="extaractfoot container">
-
-                                                    <p>A few minutes of immersion in water can help Saffron attain its
-                                                        perfect form, where the aroma and colour blends in seamlessly.
-                                                        Let the saffron strands ooze their natural color till the water
-                                                        turns yellow. This will also bring out the fragrance which
-                                                        should easily diffuse the air around you.
-                                                    </p>
-                                                    <p>Stir this mixture and after 20 mins add it to your recipe as it
-                                                        continues to release aroma, flavor &amp; colour. We suggest you
-                                                        use saffron in this way to reap the best results of our premium
-                                                        saffron.</p>
-
-                                                    <a href="product.html" class="button-red">See Our Products</a>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <!-- tab2 -->
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- extract ends-->
-            <!-- Rooted in tradition begins -->
-            
-            <!-- Rooted in tradition ends-->
-            <!-- customer-reviews begins-->
-            <div class="customer-reviews">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="customer-reviews-in">
-                                <h2 class="playfair-title">Customer Reviews</h2>
-                                <button class="map-point-sm writereviewmain" data-show=".darwin">
-                                    <div class="content">
-                                        <div class="centered-y">
-                                            <p>No reviews to show</p>
-                                            <div class="d-flexx">
-                                                <div class="plusicon"><img src="../images/plus-noreview.svg">
-                                                </div>
-                                                <span class="claimed">Add your review</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-
-                                <div class="map-container hidereview">
-                                    <div class="inner-basic division-details">
-                                        <div class="writereview darwin hide">
-
-                                            <div class="write-review d-flex">
-                                                <a href="#wrtreview">Write a review</a>
-                                                <span class="arrow-rgt"><img src="../images/arrow-rgt.png"></span>
-                                                <span class="review_close" style="position: absolute;right: 0px;"><img
-                                                        src="images/close-apply.svg"></span>
-                                            </div>
-
-
-
-                                            <br>
-                                            <div id="wrtreview" class="expirence-box">
-
-                                                <form method="POST" action="#" enctype="multipart/form-data">
-                                                    <input type="hidden" name="_token"
-                                                        value="OlZktzm0J07k7e9uaqZRHrHAz2rXoAyKQzk7SpRt">
-                                                    <div class="expirence-box-in">
-                                                        <textarea placeholder="Share your expreience with our product.."
-                                                            name="description" required=""></textarea>
-                                                        <div class="exp-rating">
-                                                            <ul>
-                                                                <div class="desktop">
-                                                                    <li><span>Product Quality</span>
-                                                                        <div id="rateYo2" class="jq-ry-container"
-                                                                            style="width: 122px;">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li><span>Shopping Experience</span>
-                                                                        <div id="rateYo3" class="jq-ry-container"
-                                                                            style="width: 122px;">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li><span>Packaging &amp; Delivery</span>
-                                                                        <div id="rateYo4" class="jq-ry-container"
-                                                                            style="width: 122px;">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </div>
-                                                                <div class="mobile480">
-                                                                    <li><span class="respobrk"><b>Rate your</b>
-                                                                            <b>overall experience</b></span>
-                                                                        <div id="rateYoresp1" class="jq-ry-container"
-                                                                            style="width: 122px;">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li><span>Product Quality</span>
-                                                                        <div id="rateYoresp2" class="jq-ry-container"
-                                                                            style="width: 122px;">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li><span>Shopping Experience</span>
-                                                                        <div id="rateYoresp3" class="jq-ry-container"
-                                                                            style="width: 122px;">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li><span>Packaging &amp; Delivery</span>
-                                                                        <div id="rateYoresp4" class="jq-ry-container"
-                                                                            style="width: 122px;">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </div>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="rating-up">
-                                                            <div class="rating-line col-lg-7 col-md-12 col-12">
-                                                                <div class="desktop">
-                                                                    <div class="overexpo">
-                                                                        <div id="rateYo1"
-                                                                            style="margin: 10px auto; width: 122px;"
-                                                                            class="jq-ry-container">
-                                                                            <div class="jq-ry-group-wrapper">
-                                                                                <div
-                                                                                    class="jq-ry-normal-group jq-ry-group">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="gray"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                                <div class="jq-ry-rated-group jq-ry-group"
-                                                                                    style="width: 0%;">
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                    <!--?xml version="1.0" encoding="utf-8"?--><svg
-                                                                                        version="1.1"
-                                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                                        viewBox="0 12.705 512 486.59"
-                                                                                        x="0px" y="0px"
-                                                                                        xml:space="preserve"
-                                                                                        width="18px" height="18px"
-                                                                                        fill="#b6140e"
-                                                                                        style="margin-left: 8px;">
-                                                                                        <polygon
-                                                                                            points="256.814,12.705 317.205,198.566 512.631,198.566 354.529,313.435 414.918,499.295 256.814,384.427 98.713,499.295 159.102,313.435 1,198.566 196.426,198.566 ">
-                                                                                        </polygon>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <p>Rate your overall experience</p>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="rating-file-upload">
-                                                                    <div class="image-upload">
-                                                                        <div class="file-select">
-                                                                            <div class="file-select-button"
-                                                                                id="fileName"><img
-                                                                                    src="../images/upload-img.svg">
-                                                                            </div>
-                                                                            <div class="file-select-name claimedRight"
-                                                                                id="noFile">
-                                                                                <span class="claimedRight"><strong>Add
-                                                                                        product image</strong></span>
-                                                                            </div>
-                                                                            <input type="file" name="attachment[]"
-                                                                                id="chooseFile" multiple="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <input type="hidden" name="product_id" value="30">
-                                                                <input type="hidden" name="overall_rating" value="1"
-                                                                    id="overall_rating">
-                                                                <input type="hidden" name="product_rating" value="1"
-                                                                    id="product_rating">
-                                                                <input type="hidden" name="shopping_rating" value="1"
-                                                                    id="shopping_rating">
-                                                                <input type="hidden" name="packing_rating" value="1"
-                                                                    id="packing_rating">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <button class="button-red">Submit Your Review</button>
-                                                </form>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- customer-reviews ends-->
-            <!-- Products starts-->
-            <section>
-                <div class="product-main">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="products-title">
-                                    <h2>You May Also Like</h2>
-                                    <img src="images/divider.png">
-                                    <a href="../product.php">VIEW ALL</a>
-                                </div>
-                            </div>
-                            <div id="productslider" class="product-slider">
-                                <div class="col-md-4 col-12 pad-0">
-                                    <div class="item">
-                                        <div class="productbox wow fadeInUp" data-wow-duration="1s"
-                                            data-wow-delay="0.5s"
-                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                            <div class="productbox-img">
-                                                <img src="../images/Artboard 9.png">
-                                                <div class="productbox-hover fadeIn-bottom">
-                                                    <a href="#">See More</a>
-                                                    <a href="javascript:add_to_cart(28,'#')" class="cart-btn">Add to
-                                                        Cart</a>
-                                                </div>
-                                            </div>
-                                            <span class="heart hide">
-                                                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                            </span>
-                                            <div class="product-subtitle">
-                                                <div class="product-subtitle-in">
-                                                    <a href="#">
-                                                        <h4>1g Saffron Gift Box- Blue</h4>
-                                                    </a>
-                                                    <span>Saffron</span>
-                                                    <div class="star-rating">
-                                                    </div>
-                                                </div>
-                                                <p class="amount">₹ 810.00</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-12 pad-0">
-                                    <div class="item">
-                                        <div class="productbox wow fadeInUp" data-wow-duration="1s"
-                                            data-wow-delay="0.5s"
-                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                            <div class="productbox-img">
-                                                <img src="../images/Artboard 10.png">
-                                                <div class="productbox-hover fadeIn-bottom">
-                                                    <a href="#">See More</a>
-                                                    <a href="javascript:add_to_cart(27,'#')" class="cart-btn">Add to
-                                                        Cart</a>
-                                                </div>
-                                            </div>
-                                            <span class="heart hide">
-                                                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                            </span>
-                                            <div class="product-subtitle">
-                                                <div class="product-subtitle-in">
-                                                    <a href="#">
-                                                        <h4>1g Saffron Gift Box- Red</h4>
-                                                    </a>
-                                                    <span>Saffron</span>
-                                                    <div class="star-rating">
-                                                    </div>
-                                                </div>
-                                                <p class="amount">₹ 810.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-12 pad-0">
-                                    <div class="item">
-                                        <div class="productbox wow fadeInUp" data-wow-duration="1s"
-                                            data-wow-delay="0.5s"
-                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                            <div class="../productbox-img">
-                                                <img src="images/Artboard 1.png">
-                                                <div class="productbox-hover fadeIn-bottom">
-                                                    <a href="#">See More</a>
-                                                    <a href="javascript:add_to_cart(26,'#')" class="cart-btn">Add to
-                                                        Cart</a>
-                                                </div>
-                                            </div>
-                                            <span class="heart hide">
-                                                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                            </span>
-                                            <div class="product-subtitle">
-                                                <div class="product-subtitle-in">
-                                                    <a href="#">
-                                                        <h4>1 Gram Powdered Saffron</h4>
-                                                    </a>
-                                                    <span>Saffron</span>
-                                                    <div class="star-rating">
-                                                    </div>
-                                                </div>
-                                                <p class="amount">₹ 390.00</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4 col-12 pad-0">
-                                    <div class="item">
-                                        <div class="productbox wow fadeInUp" data-wow-duration="1s"
-                                            data-wow-delay="0.5s"
-                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                            <div class="productbox-img">
-                                                <img src="../images/Artboard 6 (1).png">
-                                                <div class="productbox-hover fadeIn-bottom">
-                                                    <a href="#">See More</a>
-                                                    <a href="javascript:add_to_cart(18,'#')" class="cart-btn">Add to
-                                                        Cart</a>
-                                                </div>
-                                            </div>
-                                            <span class="heart hide">
-                                                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                            </span>
-                                            <div class="product-subtitle">
-                                                <div class="product-subtitle-in">
-                                                    <a href="#">
-                                                        <h4>1 Gm Premium Box</h4>
-                                                    </a>
-                                                    <span>Saffron</span>
-                                                    <div class="star-rating">
-                                                    </div>
-                                                </div>
-                                                <p class="amount">₹ 565.00</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4 col-12 pad-0">
-                                    <div class="item">
-                                        <div class="productbox wow fadeInUp" data-wow-duration="1s"
-                                            data-wow-delay="0.5s"
-                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                            <div class="productbox-img">
-                                                <img src="../images/Artboard 5 (1).png">
-                                                <div class="productbox-hover fadeIn-bottom">
-                                                    <a href="#">See More</a>
-                                                    <a href="javascript:add_to_cart(17,'#')" class="cart-btn">Add to
-                                                        Cart</a>
-                                                </div>
-                                            </div>
-                                            <span class="heart hide">
-                                                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                            </span>
-                                            <div class="product-subtitle">
-                                                <div class="product-subtitle-in">
-                                                    <a href="#">
-                                                        <h4>Single Use Pack (50mg)</h4>
-                                                    </a>
-                                                    <span>Saffron</span>
-                                                    <div class="star-rating">
-                                                    </div>
-                                                </div>
-                                                <p class="amount">₹ 500.00</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <section class="gallerynext recipe sub-product">
-
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="products-title">
-                                        <h2>Our Royal Recipes</h2>
-                                        <img src="../images/divider.png">
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                                    style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                    <div class="gallerybox">
-                                        <img  src="../images/recipes/Kesar Soya Kheer IMage.png">
-                                        <div class="product-subtitle-wrp">
-                                            <div class="product-subtitle-in-new">
-                                                <p>Kesar Soya Kheer</p>
-                                                <a href="#">View Recipe</a>
-                                            </div>
-                                            <div class="min45"><span><img src="../images/recipes/watch.png"></span>49mins
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                                    style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                    <div class="gallerybox">
-                                        <img  src="../images/recipes/Phirni Image.png">
-                                        <div class="product-subtitle-wrp">
-                                            <div class="product-subtitle-in-new">
-                                                <p>Phirni Kesar Di</p>
-                                                <a href="../view recipes/phirni-kesar-di.html">View Recipe</a>
-                                            </div>
-                                            <div class="min45"><span><img src="../images/recipes/watch.png"></span>30mins
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                                    style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                    <div class="gallerybox">
-                                        <img  src="images/recipes/Saffron Halwa Image.png">
-                                        <div class="product-subtitle-wrp">
-                                            <div class="product-subtitle-in-new">
-                                                <p>Saffron Halwa</p>
-                                                <a href="../view recipes/saffron-halwa.html">View Recipe</a>
-                                            </div>
-                                            <div class="min45"><span><img src="../images/recipes/watch.png"></span>48mins
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </section>
-                    </div>
-                </div>
-            </section>
-            <!-- Products ends-->
-
-            <!-- haritage begins-->
-            <section>
-                <div class="saffron-benefits haritage">
-                    <div class="haritage-in">
-                        <div class="haritage-saffron-img mobile768">
-                            <img src="../images/saffron-benifit.png">
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h2 class="playfair-title hallmark-title">Saffron benefits:</h2>
-                                    <p class="desktop">The answer to some of the wonders<br>
-                                        of Ayurveda, lies in the richness of saffron.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="heritage-lft benefits-box-in wow fadeInUp" data-wow-duration="1s"
-                                        data-wow-delay="0.5s"
-                                        style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                        <ul>
-                                            <li>
-                                                <div class="benefits-box hericontent">
-                                                    <img src="../images/saff-01.svg">
-                                                    <h4>Boosts Immunity
-                                                    </h4>
-                                                    <p>Saffron is rich in carotenoids
-                                                        and known to have antioxidants
-                                                        that may improve health &amp; immunity.
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="benefits-box hericontent">
-                                                    <img src="../images/saff-02.svg">
-                                                    <h4>Prevents Muscle Pain
-                                                    </h4>
-                                                    <p>With anti-inflammatory &amp; anti-
-                                                        fungal properties, Saffronis known
-                                                        to relieve pain in muscles and joints.
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="benefits-box hericontent">
-                                                    <img src="../images/usage/sleep.svg">
-                                                    <h4>A Goodnight’s Sleep
-                                                    </h4>
-                                                    <p>Studies suggest that regular
-                                                        saffron intake leads to an
-                                                        overall improvement in sleep
-                                                        quality and sleep latency.
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="benefits-box hericontent">
-                                                    <img src="../images/usage/cancer.svg">
-                                                    <h4>Anti-Cancer Benefits
-                                                    </h4>
-                                                    <p>Many scientists with their research
-                                                        have shown that Saffron has a unique
-                                                        ability to both slow and reverse cancer
-                                                        growth.
-                                                    </p>
-                                                </div>
-                                            </li>
-
-                                        </ul>
-
-                                        <div class="findout-more-benifits">
-                                            <a href="Usage_Benefits.html" class="button-red">Find Out More Benefits</a>
-                                        </div>
-
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="haritage-saffron-img desktop wow fadeInUp" data-wow-duration="1s"
-                            data-wow-delay="0.5s"
-                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                            <img src="../images/saffron-benifit.png">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- haritage ends-->
-
-            <!-- community begins-->
-            <section>
-                <div class="community">
-                    <div class="community-in">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h2 class="join-comm">Join Our Community</h2>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="communityslide">
-                                        <div id="community-slide" class="owl-carousel owl-theme owl-loaded owl-drag">
-                                            <div class="owl-stage-outer">
-                                                <div class="owl-stage"
-                                                    style="transform: translate3d(-1156px, 0px, 0px); transition: all 0s ease 0s; width: 4338px;">
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.6s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-04.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.8s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.8s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-01.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="2s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 2s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-02.png"></div>
-                                                    </div>
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="2.2s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 2.2s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-03.png">
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="owl-item active"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-01.png"></div>
-                                                    </div> -->
-                                                    <!-- <div class="owl-item active"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.2s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-04.png">
-                                                        </div>
-                                                    </div> -->
-                                                    <!-- <div class="owl-item active"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.4s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-03.png">
-                                                        </div>
-                                                    </div> -->
-                                                    <div class="owl-item active"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.6s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-04.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item" style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.8s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.8s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-01.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item" style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="2s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 2s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-02.png"></div>
-                                                    </div>
-                                                    <div class="owl-item" style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="2.2s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 2.2s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-03.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-01.png"></div>
-                                                    </div>
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.2s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-02.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.4s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-02.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="owl-item cloned"
-                                                        style="width: 279.16px; margin-right: 10px;">
-                                                        <div class="item wow fadeInUp" data-wow-duration="1.6s"
-                                                            data-wow-delay="0.5s"
-                                                            style="visibility: hidden; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: none;">
-                                                            <img src="../images/insta-feed-04.png">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="owl-nav"><button type="button" role="presentation"
-                                                    class="owl-prev"><span
-                                                        aria-label="Previous">‹</span></button><button type="button"
-                                                    role="presentation" class="owl-next"><span
-                                                        aria-label="Next">›</span></button></div>
-                                            <div class="owl-dots"><button role="button"
-                                                    class="owl-dot active"><span></span></button><button role="button"
-                                                    class="owl-dot"><span></span></button></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- community ends-->
-            <!-- exclusive offer begins-->
-            <section>
-                <div class="exclusive">
-                    <div class="exclusive-in">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                                    style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                    <h2 class="exclusive-title">Stay updated about our exclusive offers &amp; discounts.
-                                    </h2>
-                                    <!-- <p>Email list sign-up form</p> -->
-                                    <div class="newsletter">
-                                        <input type="text" placeholder="Enter your email address">
-                                    </div>
-                                    <button class="signup button-red">Sign Up</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="exclusive-img wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                            <img src="../images/newsletter-detail (1).png">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- exclusive offer ends-->
-            <!-- giftbox begins-->
-
-
-            <!-- community begins-->
-            <section>
-                <div class="community">
-                    <div class="community-in">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h2 class="join-comm">Join Our Community</h2>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="communityslide">
-                                        <div id="community-slide" class="owl-carousel owl-theme">
-                                            <div class="item wow fadeInUp animated" data-wow-duration="1s"
-                                                data-wow-delay="0.5s"
-                                                style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                                <img src="../images/insta-feed-01.png"></div>
-                                            <div class="item wow fadeInUp animated" data-wow-duration="1.2s"
-                                                data-wow-delay="0.5s"
-                                                style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                                <img src="../images/insta-feed-02.png">
-                                            </div>
-                                            <div class="item wow fadeInUp animated" data-wow-duration="1.4s"
-                                                data-wow-delay="0.5s"
-                                                style="visibility: visible; animation-duration: 1.4s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                                <img src="../images/insta-feed-03.png">
-                                            </div>
-                                            <div class="item wow fadeInUp animated" data-wow-duration="1.6s"
-                                                data-wow-delay="0.5s"
-                                                style="visibility: visible; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                                <img src="../images/insta-feed-04.png">
-                                            </div>
-                                            <div class="item wow fadeInUp animated" data-wow-duration="1.8s"
-                                                data-wow-delay="0.5s"
-                                                style="visibility: visible; animation-duration: 1.8s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                                <img src="../images/insta-feed-01.png">
-                                            </div>
-                                            <div class="item wow fadeInUp animated" data-wow-duration="2s"
-                                                data-wow-delay="0.5s"
-                                                style="visibility: visible; animation-duration: 2s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                                <img src="../images/insta-feed-02.png"></div>
-                                            <div class="item wow fadeInUp animated" data-wow-duration="2.2s"
-                                                data-wow-delay="0.5s"
-                                                style="visibility: visible; animation-duration: 2.2s; animation-delay: 0.5s; animation-name: fadeInUp;">
-                                                <img src="../images/insta-feed-03.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- community ends-->
-            <!-- exclusive offer begins-->
-            <section>
-                <div class="exclusive">
-                    <div class="exclusive-in">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                                    style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                                    <h2 class="exclusive-title">Stay updated about our exclusive offers &amp; discounts.
-                                    </h2>
-                                    <!-- <p>Sign up</p> -->
-
-                                    <div class="newsletter">
-                                        <input type="text" placeholder="Enter your email address">
-                                    </div>
-
-                                    <button class="signup button-red">Sign Up</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="exclusive-img wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"
-                            style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
-                            <img src="../images/newsletter-detail (1).png">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- exclusive offer ends-->
-
-
-
+            <section class="">
+	<div class="product-main">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="products-title">
+						<h2>Saffron Category</h2>
+						<img src="../images/divider.png">
+						<a href="../product.php">VIEW ALL</a>
+					</div>
+				</div>
+				<div id="productslider" class="product-slider">
+						<div class="col-md-4 col-12 pad-0">
+                      <form action="../php/manage_add_to_cart.php" method="POST">
+							<div class="item">
+								<div class="productbox wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+									<div class="productbox-img">
+										<img src="../images/1 Gm Box Angle 1.png">
+									</div>
+									<span class="heart hide">
+										<i class="fa fa-heart-o" aria-hidden="true"></i>
+										<i class="fa fa-heart" aria-hidden="true"></i>
+									</span>
+									<div class="border-btn mt-4 __web-inspector-hide-shortcut__">
+										<a href="seemore.php" class="cart-btn-right"><button>See More</button></a>
+										<a class="cart-btn-left"><button type="submit" name="Add_to_cart">Add to cart</button></a>
+									</div>
+									<input type="hidden" name="item_name" value="1 Gm Box Angle 1">
+									<input type="hidden" name="price" value="500.00">
+									<div class="product-subtitle">
+										<div class="product-subtitle-in">
+											<a href="#"><h4>1 Gm Box Angle 1</h4></a>
+											<span>Saffron</span>
+											<div class="star-rating">
+                     					 </div>
+										</div>
+										<p class="amount">₹ 500.00</p>
+									</div>
+								</div>
+							</div>
+            </form>
+						</div>
+						<div class="col-md-4 col-12 pad-0">
+              <form action="../php/manage_add_to_cart.php" method="POST">
+							<div class="item">
+								<div class="productbox wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+									<div class="productbox-img">
+										<img src="../images/2 Gm Box Angle 1.png">
+									</div>
+									<span class="heart hide">
+										<i class="fa fa-heart-o" aria-hidden="true"></i>
+										<i class="fa fa-heart" aria-hidden="true"></i>
+									</span>
+									<div class="border-btn mt-4 __web-inspector-hide-shortcut__">
+										<a href="#" class="cart-btn-right"> <button>See More</button></a>
+										<a class="cart-btn-left"> <button type="submit" name="Add_to_cart">Add to cart</button></a>
+									</div>
+									<input type="hidden" name="item_name" value="2 Gm Box Angle 1">
+									<input type="hidden" name="price" value="390.00">
+									<div class="product-subtitle">
+										<div class="product-subtitle-in">
+											<a href="#"><h4>2 Gm Box Angle 1</h4></a>
+											<span>Saffron</span>
+											<div class="star-rating">
+                    					   </div>
+										</div>
+										<p class="amount">₹ 390.00</p>
+									</div>
+								</div>
+							</div>
+            </form>
+						</div>
+						<div class="col-md-4 col-12 pad-0">
+            <form action="../php/manage_add_to_cart.php" method="POST">
+							<div class="item">
+								<div class="productbox wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+									<div class="productbox-img">
+										<img src="../images/5 Gm Box Angle 1.png">
+
+									</div>
+									<span class="heart hide">
+										<i class="fa fa-heart-o" aria-hidden="true"></i>
+										<i class="fa fa-heart" aria-hidden="true"></i>
+									</span>
+									<div class="border-btn mt-4 __web-inspector-hide-shortcut__">
+										<a href="#" class="cart-btn-right"> <button>See More</button></a>
+										<a href="#" class="cart-btn-left"> <button type="submit" name="Add_to_cart">Add to cart</button></a>
+									</div>
+									<input type="hidden" name="item_name" value="5 Gm Box Angle 1">
+									<input type="hidden" name="price" value="565.00">
+									<div class="product-subtitle">
+										<div class="product-subtitle-in">
+											<a href="#"><h4>5 Gm Box Angle 1</h4></a>
+											<span>Saffron</span>
+											<div class="star-rating">
+                    				 </div>
+										</div>
+										<p class="amount">₹ 565.00</p>
+									</div>
+								</div>
+							</div>
+						</form></div>
+          
+					</div>
+
+			</div>
+
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="products-title">
+						<h2>Shop By Category</h2>
+						<img src="../images/divider.png">
+						<a href="../product.php">VIEW ALL</a>
+					</div>
+				</div>
+
+				<div id="productslider" class="product-slider">
+
+
+
+								<div class="col-md-4 col-12 pad-0">
+							<div class="item">
+								<div class="productbox wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
+									<div class="productbox-img">
+										<img src="../images/5 Grams Saffron Pack.png">
+									</div>
+									<div class="border-btn mt-4">
+										<a href="../product.php"> <button>Our Category</button></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-12 pad-0">
+							<div class="item">
+								<div class="productbox wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
+									<div class="productbox-img">
+										<img src="../images/Retail Use Packs.png">
+									</div>
+									<div class="product-subtitle">
+										<a href="../product.php"><button class="border-btn">Retail Packs</button></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+
+								<div class="col-md-4 col-12 pad-0">
+							<div class="item">
+								<div class="productbox wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: hidden; animation-duration: 1s; animation-delay: 0.5s; animation-name: none;">
+									<div class="productbox-img">
+										<img src="../images/BS-1.jpg">
+									</div>
+									<div class="product-subtitle">
+										<a href="../product.php"><button class="border-btn">Premium packs</button></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+			</div>
+
+
+		</div>
+	</div>
+</section>
+<div class="container-fluid">
+					<div class="row">
+						<div class="container">
+							<div class="col-sm-12">
+								<h2 class="playfair-title hallmark-title extract-title">Here’s The Ideal Way of Using Saffron</h2>
+							</div>
+						</div>
+
+
+						<div class="col-sm-12">
+							<div class="extarct-slider">
+
+								<ul class="nav nav-tabs container" role="tablist">
+									<li class="nav-item">
+										<a id="myanchor" class="nav-link active" data-toggle="tab" href="#Powdered">Powdered Saffron</a>
+									</li>
+									<li class="nav-item">
+										<a id="myanchor" class="nav-link" data-toggle="tab" href="#Saffron0">Saffron Strands</a>
+									</li>
+								</ul>
+
+								<div class="tab-content container-fluid">
+									<!-- tab1 -->
+									<div id="Powdered" class="tab-pane active">
+										<div class="tabwapcontext">
+											<div class="slider-main-change">
+												<div class="slidech wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+													<div class="slides slideswrop">
+														<img src="../images/Baby-Saffron-Powder-1 (1).gif" class="desktop">
+														<img src="../images/Baby-Saffron-Powder-1 (1).gif" class="mobile768">
+													</div>
+													<div class="slidech-content container">
+														<h5>Get The Most Out of Our Saffron.</h5>
+														<!-- <p>Move the slider to see how it works</p> -->
+													</div>
+												</div>
+											</div>
+
+											<div class="extaractfoot wow fadeInUp container" data-wow-duration="1.6s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1.6s; animation-delay: 0.5s; animation-name: fadeInUp;">
+
+												<p>Saffron Powder is plain saffron (whole threads) which is grinded and made into powder form for easier use. It is perfect for the fast paced life of a consumer, as it can be sprinkled, stirred &amp; consumed on the go. The powdered saffron releases its colour, aroma and flavor within seconds which makes it ideal for instant use.</p>
+
+												<a href="#"><button>Our Products</button></a>
+											</div>
+										</div>
+									</div>
+									<!-- tab1 -->
+
+									<!-- tab2 -->
+									<div id="Saffron0" class="tab-pane fade">
+										<div class="tabwapcontext">
+												<div class="slider-main-change">
+														<div class="slidech">
+															<div class="slides slideswrop">
+																<img src="../images/Baby-Saffron-strands.gif" class="desktop">
+																<img src="../images/Baby-Saffron-strands.gif" class="mobile768">
+															</div>
+															<div class="slidech-content container">
+																<h5>Get the most out of our saffron.</h5>
+																<!-- <p>Move the slider to see how it works</p> -->
+															</div>
+														</div>
+													</div>
+
+													<div class="extaractfoot container">
+
+												<p>A few minutes of immersion in water can help Saffron attain its perfect form, where the aroma and colour blends in seamlessly. Let the saffron strands ooze their natural color till the water turns yellow. This will also bring out the fragrance which should easily diffuse the air around you.
+													</p>
+													<p>Stir this mixture and after 20 mins add it to your recipe as it continues to release aroma, flavor &amp; colour. We suggest you use saffron in this way to reap the best results of our premium saffron.</p>
+
+												<a href="product.php"><button>See Our Products</button></a>
+											</div>
+										</div>
+									</div>
+									<!-- tab2 -->
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+                <section>
+	<div class="haritage">
+		<div class="haritage-in">
+			<div class="haritage-saffron-img mobile768">
+				<img src="../images/right-saffron.png">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="playfair-title hallmark-title">50 Years of<br>
+							Heritage &amp; Trust</h2>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12">
+						<div class="heritage-lft wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+							<ul>
+								<li>
+									<div class="heriimg">
+										<img src="../images/heri1.svg">
+									</div>
+									<div class="hericontent">
+										<h4>A timeless tradition</h4>
+										<p>Our dedication towards procuring the finest saffron transcends six generations.</p>
+									</div>
+								</li>
+								<li>
+									<div class="heriimg">
+										<img src="../images/heri2.svg">
+									</div>
+									<div class="hericontent">
+										<h4>Your invaluable support </h4>
+										<p>Fifty years of such a fulfilling experience because<br> of your trust in us.</p>
+									</div>
+								</li>
+								<li>
+									<div class="heriimg">
+										<img src="../images/heri3.svg">
+									</div>
+									<div class="hericontent">
+										<h4>A legacy of quality &amp; consistency</h4>
+										<p>We understand that doing honest service <br> takes commitment and heart.</p>
+									</div>
+								</li>
+							</ul>
+							<a href="../about_us.php" class="common-red">Know more about us<span><img src="../images/arrow-black-right.svg"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="haritage-saffron-img desktop wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
+				<img src="../images/right-saffron.png">
+			</div>
+		</div>
+	</div>
+</section>
             <footer>
                 <div class="footer-main">
                     <div class="container">

@@ -1,8 +1,7 @@
-<?php session_start(); 
-// session_destroy();
-?>
+<?php session_start(); ?>
 <?php include 'all php/header.php';?>
-<?php include 'database/dbcon.php'; 
+
+<?php
 
 ?>
     <!-- Main Basket -->
@@ -51,33 +50,36 @@
 
         <div class="container">
 
-
-            <form action="" method="post">
-                <input type="hidden" name="_token" value="kf6UAzigfkiuvR0GEAVe3WkEaymaymeQch7PFJ7x">                <div class="row">
+    <?php 
+    if (isset($_SESSION['cart']) && count($_SESSION['cart'])>0) 
+    {
+       
+    
+     ?>
+    <form action="php/purches.php" method="post">
+                <!-- <input type="hidden" name="_token" value="kf6UAzigfkiuvR0GEAVe3WkEaymaymeQch7PFJ7x">                <div class="row"> -->
 
                     <div class="col-lg-6 col-md-12">
 
-                                                    <div class="summary-details">
+                    <div class="summary-details">
                                 <h2>Your Details</h2>
                             </div>
-
                             <div class="summary-form">
                                 <input type="hidden" class="hidden_url" value="">
                                 <div class="summary-form-wrap">
                                     <div class="from-group">
                                         <label>E-mail Address</label> <span class='red'>*</span>
-                                        <input type="email" class="form-control" name="guest_email" required>
+                                        <input type="email" class="form-control" name="email" required>
                                     </div>
                                     <div class="from-group">
                                         <label>First Name</label> <span class='red'>*</span>
-                                        <input type="text" class="form-control" name="first_name">
+                                        <input type="text" class="form-control" name="fir_name">
                                     </div>
                                     <div class="from-group">
                                         <label>Last Name</label> <span class='red'>*</span>
                                         <input type="text" class="form-control" name="last_name">
+                                        
                                     </div>
-
-
                                     <div class="shippadd">
                                         <div class="summary-details billing-tite">
                                             <h2>Shipping Address</h2>
@@ -93,18 +95,18 @@
                                                                     <p onclick="readonlyinput()">EDIT</p>
                                                                     <div class="deleteaddress">
                                                                         <img
-                                                                            src="public/images/account-dashboard/delete.svg">
+                                                                            src="../images/account-dashboard/delete.svg">
                                                                     </div>
                                                                 </div>
                                                             </div>
 
                                                             <div class="row">
                                                                 <div class="col-sm-12">
-                                                                    <div class="form-group">
+                                                                    <!-- <div class="form-group">
                                                                         <label>Name</label> <span class='red'>*</span>
                                                                         <input type="text" id="save-name" name="name"
                                                                             value="" placeholder="Enter name">
-                                                                    </div>
+                                                                    </div> -->
                                                                 </div>
                                                                 <div class="col-sm-12">
                                                                     <div class="form-group">
@@ -1106,7 +1108,6 @@
                                                                                                                                                     </select>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col-sm-12">
                                                                     <div class="form-group">
                                                                         <label>State</label> <span class='red'>*</span>
@@ -1141,7 +1142,7 @@
                                                                     <div class="form-group">
                                                                         <label>Phone Number</label> <span
                                                                             class='red'>*</span>
-                                                                        <input type="text" name="phone_no"
+                                                                        <input type="text" name="phone_number"
                                                                             value=""
                                                                             placeholder="Enter phone number"
                                                                             maxlength="10">
@@ -1222,141 +1223,141 @@
                                                                             <label>Country</label> <span
                                                                                 class='red'>*</span>
                                                                             <!-- <input type="text" name="country" value="" placeholder="Enter Country"> -->
-                                                                            <select name="guest_user_billing_country"
+                                                                            <select name="country"
                                                                                 class="form-data country" id="newcountry">
-                                                                                <option value="">-Select country-
+                                                                                <option value="country">-Select country-
                                                                                 </option>
-                                                                                                                                                                <option value="Aland Islands"
+                                                                                 <option value="Aland Islands"
                                                                                     data-countryID="2"
                                                                                     data-countrysn="AX">
                                                                                     Aland Islands
                                                                                 </option>
-                                                                                                                                                                <option value="Albania"
+                                                                                 <option value="Albania"
                                                                                     data-countryID="3"
                                                                                     data-countrysn="AL">
                                                                                     Albania
                                                                                 </option>
-                                                                                                                                                                <option value="Algeria"
+                                                                               <option value="Algeria"
                                                                                     data-countryID="4"
                                                                                     data-countrysn="DZ">
                                                                                     Algeria
                                                                                 </option>
-                                                                                                                                                                <option value="American Samoa"
+                                                                                <option value="American Samoa"
                                                                                     data-countryID="5"
                                                                                     data-countrysn="AS">
                                                                                     American Samoa
                                                                                 </option>
-                                                                                                                                                                <option value="Andorra"
+                                                                                 <option value="Andorra"
                                                                                     data-countryID="6"
                                                                                     data-countrysn="AD">
                                                                                     Andorra
                                                                                 </option>
-                                                                                                                                                                <option value="Angola"
+                                                                                 <option value="Angola"
                                                                                     data-countryID="7"
                                                                                     data-countrysn="AO">
                                                                                     Angola
                                                                                 </option>
-                                                                                                                                                                <option value="Anguilla"
+                                                                                <option value="Anguilla"
                                                                                     data-countryID="8"
                                                                                     data-countrysn="AI">
                                                                                     Anguilla
                                                                                 </option>
-                                                                                                                                                                <option value="Antarctica"
+                                                                                 <option value="Antarctica"
                                                                                     data-countryID="9"
                                                                                     data-countrysn="AQ">
                                                                                     Antarctica
                                                                                 </option>
-                                                                                                                                                                <option value="Antigua And Barbuda"
+                                                                             <option value="Antigua And Barbuda"
                                                                                     data-countryID="10"
                                                                                     data-countrysn="AG">
                                                                                     Antigua And Barbuda
                                                                                 </option>
-                                                                                                                                                                <option value="Argentina"
+                                                                                <option value="Argentina"
                                                                                     data-countryID="11"
                                                                                     data-countrysn="AR">
                                                                                     Argentina
                                                                                 </option>
-                                                                                                                                                                <option value="Armenia"
+                                                                                 <option value="Armenia"
                                                                                     data-countryID="12"
                                                                                     data-countrysn="AM">
                                                                                     Armenia
                                                                                 </option>
-                                                                                                                                                                <option value="Aruba"
+                                                                                <option value="Aruba"
                                                                                     data-countryID="13"
                                                                                     data-countrysn="AW">
                                                                                     Aruba
                                                                                 </option>
-                                                                                                                                                                <option value="Australia"
+                                                                                <option value="Australia"
                                                                                     data-countryID="14"
                                                                                     data-countrysn="AU">
                                                                                     Australia
                                                                                 </option>
-                                                                                                                                                                <option value="Austria"
+                                                                                 <option value="Austria"
                                                                                     data-countryID="15"
                                                                                     data-countrysn="AT">
                                                                                     Austria
                                                                                 </option>
-                                                                                                                                                                <option value="Azerbaijan"
+                                                                                <option value="Azerbaijan"
                                                                                     data-countryID="16"
                                                                                     data-countrysn="AZ">
                                                                                     Azerbaijan
                                                                                 </option>
-                                                                                                                                                                <option value="Bahamas The"
+                                                                                 <option value="Bahamas The"
                                                                                     data-countryID="17"
                                                                                     data-countrysn="BS">
                                                                                     Bahamas The
                                                                                 </option>
-                                                                                                                                                                <option value="Bahrain"
+                                                                                 <option value="Bahrain"
                                                                                     data-countryID="18"
                                                                                     data-countrysn="BH">
                                                                                     Bahrain
                                                                                 </option>
-                                                                                                                                                                <option value="Bangladesh"
+                                                                                <option value="Bangladesh"
                                                                                     data-countryID="19"
                                                                                     data-countrysn="BD">
                                                                                     Bangladesh
                                                                                 </option>
-                                                                                                                                                                <option value="Barbados"
+                                                                                 <option value="Barbados"
                                                                                     data-countryID="20"
                                                                                     data-countrysn="BB">
                                                                                     Barbados
                                                                                 </option>
-                                                                                                                                                                <option value="Belarus"
+                                                                                <option value="Belarus"
                                                                                     data-countryID="21"
                                                                                     data-countrysn="BY">
                                                                                     Belarus
                                                                                 </option>
-                                                                                                                                                                <option value="Belgium"
+                                                                                  <option value="Belgium"
                                                                                     data-countryID="22"
                                                                                     data-countrysn="BE">
                                                                                     Belgium
                                                                                 </option>
-                                                                                                                                                                <option value="Belize"
+                                                                                 <option value="Belize"
                                                                                     data-countryID="23"
                                                                                     data-countrysn="BZ">
                                                                                     Belize
                                                                                 </option>
-                                                                                                                                                                <option value="Benin"
+                                                                                <option value="Benin"
                                                                                     data-countryID="24"
                                                                                     data-countrysn="BJ">
                                                                                     Benin
                                                                                 </option>
-                                                                                                                                                                <option value="Bermuda"
+                                                                               <option value="Bermuda"
                                                                                     data-countryID="25"
                                                                                     data-countrysn="BM">
                                                                                     Bermuda
                                                                                 </option>
-                                                                                                                                                                <option value="Bhutan"
+                                                                                <option value="Bhutan"
                                                                                     data-countryID="26"
                                                                                     data-countrysn="BT">
                                                                                     Bhutan
                                                                                 </option>
-                                                                                                                                                                <option value="Bolivia"
+                                                                             <option value="Bolivia"
                                                                                     data-countryID="27"
                                                                                     data-countrysn="BO">
                                                                                     Bolivia
                                                                                 </option>
-                                                                                                                                                                <option value="Bosnia and Herzegovina"
+                                                                                <option value="Bosnia and Herzegovina"
                                                                                     data-countryID="28"
                                                                                     data-countrysn="BA">
                                                                                     Bosnia and Herzegovina
@@ -2480,7 +2481,7 @@
                                                                                 <label>City</label> <span
                                                                                     class='red'>*</span>
                                                                                 <!-- <input type="text" name="city" value="" placeholder="Enter city"> -->
-                                                                                <select name="guest_user_billing_city"
+                                                                                <select name="city"
                                                                                     id="city" class="form-data city">
                                                                                     <option value="">-city-</option>
                                                                                 </select>
@@ -2492,7 +2493,7 @@
                                                                             <label>Zip Code</label> <span
                                                                                 class='red'>*</span>
                                                                             <input type="text"
-                                                                                name="guest_user_billing_zip_code"
+                                                                                name="zip_code"
                                                                                 class="" id="zip_code1"
                                                                                 value=""
                                                                                 placeholder="Enter Zip Code"
@@ -2546,7 +2547,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="mobile480 proceedcheckout">
-                                                    <button class="button-red">Checkout</button>
+                                                    <button type="submit" name="order" class="button-red">Place Order</button>
                                                 </div>
 
                                             </div>
@@ -2555,10 +2556,6 @@
                                 </div>
                             </div>
                          </div>
-
-
-  
-
                     <div class="col-lg-6 col-md-12">
                         <div class="order-summary-right">
                             <div class="baskdetail-in">
@@ -2566,8 +2563,6 @@
                                     <div class="order-smmry-title">
                                         <h4>ORDER SUMMARY</h4>
                                     </div>
-
-
     <?php 
     $total=0;
     if (isset($_SESSION['cart'])) {
@@ -2583,22 +2578,23 @@
                                                                 src="#">
                                                             <div class="pricingsidecontent">
                                                                 <h4><?php echo $value['item_name'];?></h4>
-                                                                 <p>₹ <?php echo $value['price'];?></p>
+                                                                 <p>₹ <?php echo $value['price'];?> <?php echo "<input type='hidden' class='iprice' value='$value[price]'>"; ?></p>
                                                             </div>
                                                         </div>
                                                         <div class="rightord">
                                                             <div class="qtyy">
                                                                 <p>QTY</p>
                                                                 <div class="qtysubwrp">
-                                                                    <?php echo "<input type='number' value='$value[quantity]' min='1' max='10'"; ?>
+                                                                    <?php echo "<input type='number' onchange='subTotal()' class='iquantity' value='$value[quantity]' min='1' max='10'>"; ?>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <?php echo "<form action='php/manage_add_to_cart.php' method='POST'>
-                                                        <button name='remove_cart'>Remove</button>
-                                                        <input type='hidden' name='item_name' value='$value[item_name]'>
-                                                         </form>";?>
+                                                       
                                                     </div>
+                                                    <?php echo "<form action='php/manage_add_to_cart.php' method='POST'>
+                                                        <button name='remove_cart'>Remove</button>
+                                                        <input type='hidden' value='$value[item_name]'>
+                                                         </form>";?>
                                                 </div>
                                             </li>
                                         </ul>
@@ -2607,31 +2603,35 @@
     }
     ?>
                                 </div>
-                                <div class="order-details-down">
-                                    <div class="couponcodebsk hide">
-                                        <p>Got a Promo Code?</p>
-                                        <input type="text" placeholder="SAFFRON10">
-                                        <button type='button' onClick="javascript:void(0);"
-                                            class="button-red">Apply</button>
-                                    </div>
+                                
                                      <div class="peachcolorwrp">
                                         <div class="totalpricingin">
                                             <ul>
                                                 <li><b>Shipping</b>
                                                     ₹ 0.00 </li>
-                                                <li><b>Sub Total</b>
+                                                <li><b>Total single QTY Selected Item Price</b>
                                                     <span><?php echo $total ?></span>
                                                 </li>
-                                                <li><b>Discount Applied</b> <span>-
+                                                <li><b>Discount Applied</b> <span>
                                                         0.00</span></li>
-                                                      <li><b>Auto Applied Discount</b> <span>-
-                                                        0.00</span></li>
-                                                <li><b>Total</b> <span><?php echo $total ?></span>
+                                                <li><b>Total Selected Item Price with quantity</b><?php
+                                                 
+                                                //  $total=0;
+                                                 if (isset($_SESSION['cart'])) {
+                                                     foreach ($_SESSION['cart'] as $key => $value) {
+                                                        //  $total=$total+$value['price'];
+                                                         echo " <span class='itotal'></span>";
+                                                     }
+                                                    }
+                                                ?>
                                                 </li>
+                                                <li><b>Grand Total</b> <span name="gt" id="gtotal">
+                                                        0.00</span>
+                                                    </li>
                                             </ul>
                                         </div>
                                     <div class="proceedcheckout">
-                                                <button type='submit' class="button-red">Checkout</button>
+                                    <button type='submit' name="order" class="button-red">Checkout</button>
                                     </div>
                                     </div>
                             </div>
@@ -2642,7 +2642,8 @@
                     </div>
                 </div>
         </div>
-        </form>
+    </form>
+    <?php } ?>
     </div>
     </div>
     </div>
@@ -2814,8 +2815,8 @@
                             zipcode_checker_method: 'on',
                         },
                         phone_no: {
-                            required: true, // field is mandatory
-                            intlTelNumber: true // must contain a valid phone number
+                            required: true,
+                            intlTelNumber: true 
                         },
 
                     },
@@ -2826,10 +2827,7 @@
                         last_name: {
                             required: "Please enter your last name",
                         },
-                        //  guest_email: {
-                        //   required: "Please enter your email address",
-                        //   guest_email: "Please enter a valid email address.",
-                        //  },
+                      
 
                         name: {
                             required: "Please enter your name",
@@ -2958,6 +2956,24 @@
                         '.results');
                 });
             });
+        </script>
+        <script>
+            var gt=0;
+            var iprice=document.getElementsByClassName('iprice');
+            var iquantity=document.getElementsByClassName('iquantity');
+            var itotal=document.getElementsByClassName('itotal');
+            var gtotal=document.getElementById('gtotal');
+
+            function subTotal(){
+                gt=0;
+                 for(i=0; i<iprice.length; i++){
+                    itotal[i].innerText=(iprice[i].value)*(iquantity[i].value);
+                    gt=gt+(iprice[i].value)*(iquantity[i].value);
+                }
+                gtotal.innerText=gt;
+            }
+            subTotal();
+
         </script>
 
 </body>
